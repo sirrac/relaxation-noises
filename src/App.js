@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import styled, {keyframes} from 'styled-components';
-import styledBox from './StyledBoxes';
+import StyledBox from './StyledBoxes';
+import React, { useEffect, useState } from "react";
 
 function App() {
 
@@ -15,8 +16,13 @@ function App() {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      {fadeInBox && <Box />}
-    </div>
+       {fadeInBox && <StyledBox />}
+       {fadeInBox && <StyledBox />}
+       {fadeInBox && <StyledBox />}
+       {fadeInBox && <StyledBox />}
+       
+  </div> 
+
   );
 }
 

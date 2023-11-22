@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const fadeIn = keyframes`
+const FadeIn = keyframes`
   from {
     opacity: 0;
   }
@@ -10,12 +10,13 @@ const fadeIn = keyframes`
   }
 `;
 
-const styledBox = styled.div`
+const StyledBox = styled.div`
   width: 100px;
   height: 100px;
-  background-color: light-blue;
+  background-color: blue;
+  animation: ${FadeIn} 2s ease-in-out;
   margin: 30px;
-  animation: ${fadeIn} 2s ease-in-out;
+ 
 `;
 
-export default StyledBoxes;
+export default StyledBox;
