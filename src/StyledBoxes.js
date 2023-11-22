@@ -11,11 +11,11 @@ const FadeIn = keyframes`
 `;
 
 const StyledBox = styled.div`
-  width: 100px;
-  height: 100px;
-  background-color: blue;
+  width: 150px;
+  height: 150px;
   animation: ${FadeIn} 2s ease-in-out;
-  margin: 30px;
+  margin: 50px;
+  border-radius: 10px;
  
 `;
 
