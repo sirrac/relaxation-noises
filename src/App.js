@@ -10,13 +10,28 @@ import wolf from "./images/wolf.jpg";
 
 function HeaderBar() {
   return (
-    <h1>Testing Space</h1>
+    <React.Fragment>
+      <div id = 'HeaderBarContainer'>
+        <h1 style = {{justifyContent: 'center', alignItems: 'center', display: 'flex', fontFamily: 'Helvetica, Sans-Serif'}}> 
+          The Relaxation Place 
+        </h1>
+      </div>
+    </React.Fragment>
+  )
+}
+
+function Footer() {
+  return (
+    <div id = 'footer'>
+      <p> Follow me on Github!</p>
+    </div>
   )
 }
 
 function App() {
 
   const [fadeInBox, fadeInBoxSetter] = useState(false);
+  const [fadeInFooter, fadeInFooterSetter] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {  
@@ -24,17 +39,25 @@ function App() {
     }, 500)
   });
 
+  useEffect(() => {
+    setTimeout(() => {
+      fadeInFooterSetter(true);
+    }, 5000)
+  });
+
   return (
     <div> 
       <HeaderBar></HeaderBar>
 
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-       {fadeInBox && <StyledBox style = {{backgroundImage: `url(${bird})`}} />}
+       {fadeInBox && <StyledBox style = {{backgroundImage: `url(${bird})`, backgroundSize: "cover"}} />}
        {fadeInBox && <StyledBox style = {{backgroundImage: `url(${trees})`}} />}
        {fadeInBox && <StyledBox style = {{backgroundImage: `url(${water})`}}/>}
        {fadeInBox && <StyledBox style = {{backgroundImage: `url(${wolf})`}} />}
+
        
      </div> 
+     {fadeInFooter && <Footer></Footer>}
     </div>
 
   );

@@ -11,8 +11,8 @@ const FadeIn = keyframes`
 `;
 
 const StyledBox = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   animation: ${FadeIn} 2s ease-in-out;
   margin: 50px;
   border-radius: 10px;
